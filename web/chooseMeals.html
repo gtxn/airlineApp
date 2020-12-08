@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Meals</title>
+    <!-- <link rel="stylesheet" href="./css/chooseMeals.css"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+</head>
+
+<body>
+
+    <div class='container'>
+
+        <div class='center'>
+            <h1 class='display-4 animated fadeInDown' id='welcome'></h1>
+        </div>
+
+        <br>
+        <br>
+
+        <button class='btn btn-outline-primary' id='assist' onclick='reqAssist()'>Request assistance</button>
+
+        <form action="http://glendatxn.local:3000/subMeal" method="POST" id='chooseMeals'>
+
+            <br>
+            <br>
+
+            <div class='row justify-content-md-center'>
+                <div class='card col-md-6' style='width: 30rem'>
+                    <div class='card-body'>
+                        <h4 class='card-title'>Choose your meals : </h4>
+                        <label for='meal1'>Choose meal 1: </label>
+
+                        <br>
+                        <br>
+
+                        <select class='custom-select' id="meal1" name="meal1" form='chooseMeals'>
+                            <option value="fish">Fish</option>
+                            <option value="chicken">Chicken</option>
+                        </select>
+
+                        <br>
+                        <br>
+
+                        <label for='meal2'>Choose meal 2: </label>
+
+                        <br>
+
+                        <select class='custom-select' id="meal2" name="meal2" form='chooseMeals'>
+                            <option value="omelette">Omelette</option>
+                            <option value="sandwich">Sandwich</option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <br>
+
+                <button class='btn btn-primary' value='submit' id='submit'>Submit choice</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="./js/chooseMeals.js"></script>
+
+
+</body>
+
+</html>

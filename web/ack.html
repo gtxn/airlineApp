@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acknowleded</title>
+</head>
+
+<body>
+    <p>Your request has been acknowledged. click <a href='' id='a'>here</a> to go back
+        to meal selection page</p>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let name = urlParams.get('fullName')
+        let seatNum = urlParams.get('seatNum')
+        let ic = urlParams.get('icNum')
+
+        let a = document.getElementById('a')
+
+        a.href = `http://glendatxn.local:3000/chooseMeals?fullName=${name}&seatNum=${seatNum}`
+
+    </script>
+</body>
+
+</html>
